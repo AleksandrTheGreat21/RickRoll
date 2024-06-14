@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirect Button</title>
+  <title>YouTube Redirector</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 20px;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Redirect Button Example</h1>
-  <button id="redirectButton">Go to YouTube</button>
-
-  <script>
-    document.getElementById("redirectButton").addEventListener("click", function() {
-      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    });
-  </script>
+  <h2>YouTube Redirector</h2>
+  <form id="redirectForm">
+    <input type="text" id="videoUrl" placeholder="Enter YouTube Video URL">
+    <button type="submit">Redirect</button>
+  </form>
+  <script src="popup.js"></script>
 </body>
 </html>
