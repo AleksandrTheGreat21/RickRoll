@@ -1,16 +1,20 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Rickstension",
-  "version": "3.0",
-  "description": "A Chrome extension to embed a YouTube video.",
+  "version": "1.5",
+  "description": "Rick.",
   "permissions": [
-    "activeTab"
+    "tabs"
   ],
-  "action": {
-    "default_popup": "popup.html",
+  "browser_action": {
+    "default_popup": "index.html",
     "default_icon": "youtube.png"
   },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; frame-src https://www.youtube.com"
-  }
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs"
+  ]
 }
